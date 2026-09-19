@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLACEHOLDER ART — provisional mark for Khat'nu (Form), to be replaced with final artwork.
+     Filled shapes only, fill as an attribute: utils/svg-theme.mjs rewrites fill (not
+     stroke), so a stroked placeholder would stay black and vanish on dark ground. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <path fill="#000000" fill-rule="evenodd" d="M4 4h56v56H4V4Zm5 5v46h46V9H9Z"/>
+  <path fill="#000000" fill-rule="evenodd" d="M18 18h28v28H18V18Zm5 5v18h18V23H23Z"/>
+  <rect fill="#000000" x="29" y="29" width="6" height="6"/>
+</svg>

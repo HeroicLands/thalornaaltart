@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLACEHOLDER ART — provisional mark for Ankh'kemet (River), to be replaced with final artwork.
+     Filled shapes only, fill as an attribute: utils/svg-theme.mjs rewrites fill (not
+     stroke), so a stroked placeholder would stay black and vanish on dark ground. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <path fill="#000000" fill-rule="evenodd" d="M4 4h56v56H4V4Zm5 5v46h46V9H9Z"/>
+  <path fill="#000000" d="M14 26q5-5 9 0t9 0 9 0 9 0v4q-5 5-9 0t-9 0-9 0-9 0Z"/>
+  <path fill="#000000" d="M14 36q5-5 9 0t9 0 9 0 9 0v4q-5 5-9 0t-9 0-9 0-9 0Z"/>
+</svg>
