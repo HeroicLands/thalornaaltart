@@ -47,10 +47,10 @@ packageBuild:
         - { from: assets/images, to: assets/images }
         - { from: assets/LICENSE, to: assets/LICENSE }
 
-    # Matches the system: an icon's default-black fill is rewritten to follow
-    # the Foundry theme, so a substituted icon and the one it replaces sit the
-    # same way in a compendium listing.
-    assetTransform: ./utils/svg-theme.mjs
+    # The shipped transform: an icon's default-black fill follows the reader's
+    # colour scheme, so a substituted icon and the one it replaces sit the same
+    # way in a compendium listing.
+    assetTransform: svg-theme
 
     manifest:
         title: Thalorna Module Alternative Art
