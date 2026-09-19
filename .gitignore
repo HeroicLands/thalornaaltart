@@ -1,0 +1,60 @@
+# Dependency directories
+/node_modules/
+
+# dotenv environment variables file
+/.env
+/.env.test
+/.env.local
+
+# AI
+/.claude/
+CLAUDE.md
+AI.md
+
+# Visual Studio
+/.vscode/
+/*.code-workspace
+
+# GitHub
+.github/copilot-instructions.md
+
+# Obsidian (assets/content is opened as a vault; local UI state only)
+assets/content/.obsidian/
+
+# macOS specific files
+# general
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Build files
+/build/
+/coverage/
+/css/
+
+# The website: `site/` holds the configuration, the layouts and the theme
+# submodule; the pages, Hugo's caches and the rendered output are all built.
+/site/content/
+/site/public/
+/site/resources/
+/site/.hugo_build.lock
+
+# Hidden files
+/nogit/
+*.wip
+
+# Symlinked into worktrees from the parent checkout.
+/node_modules
+*.el

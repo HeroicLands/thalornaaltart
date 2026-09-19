@@ -1,0 +1,40 @@
+{
+    "name": "thalornaaltart",
+    "private": true,
+    "productName": "Thalorna Module Alternative Art",
+    "description": "Alternative image and icon assets for use with the Thalorna module",
+    "version": "0.0.1",
+    "author": {
+        "name": "Tom Rodriguez",
+        "email": "toasty@heroiclands.org",
+        "url": "https://www.heroiclands.org"
+    },
+    "x-contact": {
+        "discord": "toasty#8538",
+        "bluesky": "@toasty.heroiclands.org"
+    },
+    "homepage": "https://www.heroiclands.org/thalornaaltart/",
+    "license": "CC-BY-SA-4.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HeroicLands/thalornaaltart/"
+    },
+    "bugs": "https://github.com/HeroicLands/thalornaaltart/issues",
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "type": "module",
+    "scripts": {
+        "prepare": "git config core.hooksPath node_modules/@heroiclands/package-build/githooks || true",
+        "clean": "package-build clean",
+        "distclean": "package-build clean --distclean",
+    },
+    "devDependencies": {
+        "@changesets/cli": "^3.0.2",
+        "@heroiclands/hugo-theme": "^0.6.0",
+        "@heroiclands/package-build": "^22.0.2",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^3.9.6",
+        "yaml": "^2.9.0"
+    }
+}

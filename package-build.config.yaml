@@ -1,0 +1,82 @@
+# See `@heroiclands/package-build` for the full documentation.
+
+contentPackage: thalornaaltart
+packageKind: modules
+
+compatibility:
+    minimum: "14.359"
+    verified: "14.364"
+
+relationships:
+    modules:
+        - id: thalorna
+          type: module
+          manifest: https://github.com/HeroicLands/thalorna/releases/download/v0.0.2/system.json
+          compatibility:
+              minimum: "0.0.2"
+              verified: "0.0.6"
+          # Its Item packs are this repository's item catalogue. A Thalorna
+          # being is nested items addressed by shortcode, and almost all of
+          # those belong to sohl; `content-build deps fetch` caches them, keyed
+          # by the `verified` version above so a build names one artifact.
+          itemCatalog: true
+
+stats:
+    lastModifiedBy: hlbuilder0000000
+
+itemBuilders: sohl
+
+# The dependency between the passes is real and the order here is not what
+# enforces it: the actors pass resolves each being's embedded items against the
+# items pass's output, and package-build derives the compile order from what
+# each pass reads, so items compile first whatever order this list declares
+# (package-build#73). The list is free to be ordered for a reader, because it
+# is also the manifest's `packs` array and the thing `packFolders` below names.
+#
+# What the actors pass cannot find locally comes from sohl's item catalogue,
+# declared above. Run `content-build deps fetch` before compiling; a cold cache
+# fails saying so.
+packs: []
+
+packageBuild:
+    assets:
+        - { from: src/thalorna.mjs, to: thalorna.mjs }
+        - { from: README.md, to: README.md }
+        - { from: LICENSE.md, to: LICENSE.md }
+        - { from: src/LICENSE, to: src/LICENSE }
+        - { from: assets/icons, to: assets/icons }
+        - { from: assets/images, to: assets/images }
+        - { from: assets/LICENSE, to: assets/LICENSE }
+
+    # Matches the SoHL system: every icon's default-black fill is rewritten to
+    # follow the Foundry theme, so a module icon and a system icon sitting in
+    # the same compendium listing look the same.
+    assetTransform: ./utils/svg-theme.mjs
+
+    manifest:
+        title: Thalorna Module Alternative Art
+        description: Alternative image and icon assets for use with the Thalorna module
+        authors:
+            - name: Toasty
+              discord: toasty#8538
+              flags: {}
+        license: LICENSE.md
+        readme: README.md
+        changelog: CHANGELOG.md
+        flags:
+            allowBugReporter: true
+        languages: []
+        esmodules:
+            - thalornaaltart.mjs
+        styles: []
+        media:
+            - type: setup
+              url: module/thalornaaltart/assets/ui/thalornaaltart-setup.webp
+              thumbnail: systems/thalornaaltart/assets/ui/thalornaaltart-setup-thumb.webp
+            - type: logo
+              url: module/thalornaaltart/assets/ui/thalornaaltart-logo.webp
+            - type: icon
+              url: module/thalornaaltart/assets/ui/thalornaaltart-icon.webp
+            - type: banner
+              url: module/thalornaaltart/assets/ui/thalornaaltart-banner.webp
+        socket: true
