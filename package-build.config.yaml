@@ -27,6 +27,8 @@ publish:
         prefix: ""
 
 site:
+    assets: https://cdn.heroiclands.org
+    # The host every package's imagery is served from.
     notfound:
         tagline: "This module has one page, and it is not at"
         sitenoun: "module"
