@@ -44,13 +44,6 @@ assets/content/.obsidian/
 /coverage/
 /css/
 
-# The website: `site/` holds the configuration, the layouts and the theme
-# submodule; the pages, Hugo's caches and the rendered output are all built.
-/site/content/
-/site/public/
-/site/resources/
-/site/.hugo_build.lock
-
 # Hidden files
 /nogit/
 *.wip

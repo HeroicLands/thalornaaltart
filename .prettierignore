@@ -3,7 +3,7 @@
 /nogit/
 package-lock.json
 
-# The website. The pages beneath `site/content/` are emitted by the content
-# build, and the theme's layouts are Go templates in `.html` files, which
-# Prettier reflows as HTML — folding the template directives into prose.
-/site/
+# The generated Hugo configuration under `build/hugo/` carries content and
+# layouts that are Go templates in `.html` files, which Prettier reflows as HTML —
+# folding the template directives into prose.
+/build/hugo/
