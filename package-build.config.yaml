@@ -1,5 +1,3 @@
-# See `@heroiclands/package-build` for the full documentation.
-
 contentPackage: thalornaaltart
 packageKind: modules
 
@@ -15,22 +13,17 @@ relationships:
           type: module
           manifest: https://github.com/HeroicLands/thalorna/releases/latest/download/module.json
           contentIndex: false
-          # The dependency is for Foundry only; this package cites nothing from its content.
 
-# The floor: the authored homepage at /thalornaaltart/ and no other page. There
-# is no content tree to publish beyond it — this module ships pictures.
+# This module ships pictures, not a content tree, so it publishes only the
+# homepage.
 publish:
     site: homepage
-    # The module's content *is* its homepage, so it mounts at the package root
-    # and the prefix is empty.
     address:
         prefix: ""
 
 site:
     assets: https://cdn.heroiclands.org
-    # The host every package's imagery is served from.
     description: Machine-generated artwork for the Thalorna setting module for Foundry VTT.
-    # The site's <meta name="description">.
     notfound:
         tagline: "This module has one page, and it is not at"
         sitenoun: "module"
@@ -48,9 +41,8 @@ site:
 stats:
     lastModifiedBy: hlbuilder0000000
 
-# This module compiles no documents. It ships files, which is what an
-# alternative-art module is: the same addresses Thalorna publishes, resolving to
-# different pictures when this module is installed and enabled.
+# This module ships files that resolve to Thalorna's own addresses, replacing
+# its pictures when installed and enabled.
 packs: []
 
 packageBuild:
@@ -63,15 +55,14 @@ packageBuild:
         - { from: assets/images, to: assets/images }
         - { from: assets/LICENSE, to: assets/LICENSE }
 
-    # The shipped transform: an icon's default-black fill follows the reader's
-    # colour scheme, so a substituted icon and the one it replaces sit the same
-    # way in a compendium listing.
+    # svg-theme makes an icon's default-black fill follow the reader's colour
+    # scheme, so a substituted icon sits like the one it replaces in a
+    # compendium listing.
     assetTransform: svg-theme
 
     manifest:
         title: Thalorna Module Alternative Art
         descriptionHtml: Alternative image and icon assets for use with the Thalorna module
-        # The Foundry package browser listing.
         authors:
             - name: Toasty
               discord: toasty#8538
