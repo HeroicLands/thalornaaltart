@@ -14,6 +14,8 @@ relationships:
         - id: thalorna
           type: module
           manifest: https://github.com/HeroicLands/thalorna/releases/latest/download/module.json
+          contentIndex: false
+          # The dependency is for Foundry only; this package cites nothing from its content.
 
 # The floor: the authored homepage at /thalornaaltart/ and no other page. There
 # is no content tree to publish beyond it — this module ships pictures.
@@ -25,9 +27,21 @@ publish:
         prefix: ""
 
 site:
-    # Required, not defaulted: the directory is wiped on every run, and an unset
-    # value resolves to the repository root.
-    out: site/content
+    assets: https://cdn.heroiclands.org
+    # The host every package's imagery is served from.
+    notfound:
+        tagline: "This module has one page, and it is not at"
+        sitenoun: "module"
+        links:
+            - title: Thalorna Alternative Art
+              url: /
+              text: "What this module replaces, and how to install it."
+            - title: Thalorna
+              url: "https://www.heroiclands.org/thalorna/"
+              text: "The setting whose artwork this module replaces."
+            - title: Song of Heroic Lands
+              url: "https://www.heroiclands.org/sohl/"
+              text: "The Foundry VTT system both are built for."
 
 stats:
     lastModifiedBy: hlbuilder0000000
@@ -54,7 +68,6 @@ packageBuild:
 
     manifest:
         title: Thalorna Module Alternative Art
-        description: Alternative image and icon assets for use with the Thalorna module
         authors:
             - name: Toasty
               discord: toasty#8538

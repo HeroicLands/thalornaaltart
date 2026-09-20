@@ -2,7 +2,6 @@
 "thalornaaltart": patch
 ---
 
-**This package moves to `@heroiclands/package-build@^22.0.3`.**
+**The module's website page carries the organization's shared header navigation.**
 
-It builds on the toolchain's own icon theming and deployment-root files rather
-than on copies of its own, so there is one less place for either to drift.
+The site now builds from the generated Hugo configuration on `@heroiclands/package-build@^22.1.1`, which includes organization-wide header links alongside its own.
