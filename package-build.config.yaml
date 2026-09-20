@@ -29,6 +29,8 @@ publish:
 site:
     assets: https://cdn.heroiclands.org
     # The host every package's imagery is served from.
+    description: Machine-generated artwork for the Thalorna setting module for Foundry VTT.
+    # The site's <meta name="description">.
     notfound:
         tagline: "This module has one page, and it is not at"
         sitenoun: "module"
@@ -68,6 +70,8 @@ packageBuild:
 
     manifest:
         title: Thalorna Module Alternative Art
+        descriptionHtml: Alternative image and icon assets for use with the Thalorna module
+        # The Foundry package browser listing.
         authors:
             - name: Toasty
               discord: toasty#8538
