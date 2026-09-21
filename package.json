@@ -48,7 +48,7 @@
         "deploy:prod": "run-s build push:prod",
         "deploy:release": "run-s build build:pack-release",
         "changeset": "changeset",
-        "changeset:version": "changeset version && npm install --package-lock-only",
+        "changeset:version": "changeset version && package-build changelog group && npm install --package-lock-only",
         "changeset:check": "changeset status --since=origin/main",
         "build:deps": "content-build deps fetch",
         "build:site-content": "content-build site",
@@ -59,8 +59,8 @@
     },
     "devDependencies": {
         "@changesets/cli": "^3.0.2",
-        "@heroiclands/hugo-theme": "^0.7.0",
-        "@heroiclands/package-build": "^22.4.2",
+        "@heroiclands/hugo-theme": "^0.7.1",
+        "@heroiclands/package-build": "^22.4.4",
         "npm-run-all": "^4.1.5",
         "prettier": "^3.9.6",
         "yaml": "^2.9.0"
