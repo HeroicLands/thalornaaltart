@@ -23,6 +23,7 @@ publish:
 
 site:
     assets: https://cdn.heroiclands.org
+    search: false
     description: Machine-generated artwork for the Thalorna setting module for Foundry VTT.
     notfound:
         tagline: "This module has one page, and it is not at"
