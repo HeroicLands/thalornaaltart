@@ -1,6 +1,5 @@
 # Build output — regenerated on every run, never hand-edited.
 /build/
-/nogit/
 package-lock.json
 
 # The generated Hugo configuration under `build/hugo/` carries content and
