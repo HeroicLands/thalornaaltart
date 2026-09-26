@@ -1,7 +1,8 @@
 ---
-type: homepage
 shortcode: root
-title: Thalorna Alternative Art
+name:
+  full: Thalorna Alternative Art
+type: homepage
 description: >-
   Machine-generated artwork for the Thalorna setting — the same pictures the
   sourcebook and the website carry, for anyone who wants them in Foundry.
