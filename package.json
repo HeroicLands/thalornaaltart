@@ -29,7 +29,7 @@
         "distclean": "package-build clean --distclean",
         "build": "npm ci && npm run build:noci",
         "build:local": "npm i && npm run build:noci",
-        "build:noci": "run-s lint build:content-index build:assets build:module build:site",
+        "build:noci": "run-s build:deps lint build:content-index build:assets build:module build:site",
         "build:assets": "package-build assets",
         "build:content-index": "content-build content-index",
         "build:module": "package-build manifest",
