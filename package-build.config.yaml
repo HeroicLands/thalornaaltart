@@ -12,7 +12,7 @@ relationships:
         - id: thalorna
           type: module
           manifest: https://github.com/HeroicLands/thalorna/releases/latest/download/module.json
-          contentIndex: false
+          contentIndex: true
 
 # This module ships pictures, not a content tree, so it publishes only the
 # homepage.
@@ -53,7 +53,11 @@ packageBuild:
         - { from: LICENSE.md, to: LICENSE.md }
         - { from: src/LICENSE, to: src/LICENSE }
         - { from: assets/icons, to: assets/icons }
-        - { from: assets/images, to: assets/images }
+        - { from: assets/images/banners, to: assets/images/banners }
+        - { from: assets/images/provenance.yaml, to: assets/images/provenance.yaml }
+        - from: assets/images/beings
+          to: assets/images/beings
+          bindsTo: { package: thalorna, type: being }
         - { from: assets/LICENSE, to: assets/LICENSE }
 
     # svg-theme makes an icon's default-black fill follow the reader's colour
