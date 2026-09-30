@@ -14,13 +14,6 @@ relationships:
           manifest: https://github.com/HeroicLands/thalorna/releases/latest/download/module.json
           contentIndex: true
 
-# This module ships pictures, not a content tree, so it publishes only the
-# homepage.
-publish:
-    site: homepage
-    address:
-        prefix: ""
-
 site:
     assets: https://cdn.heroiclands.org
     search: false
