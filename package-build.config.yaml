@@ -5,6 +5,12 @@ compatibility:
     minimum: "14.359"
     verified: "14.364"
 
+authors:
+    - name: Tom Rodriguez
+      email: toasty@heroiclands.org
+      url: https://www.heroiclands.org
+      discord: toasty#8538
+
 relationships:
     # The art this module ships answers to Thalorna's addresses, so without
     # Thalorna installed it shadows nothing and has nothing to say.
@@ -61,10 +67,6 @@ packageBuild:
     manifest:
         title: Thalorna Module Alternative Art
         descriptionHtml: Alternative image and icon assets for use with the Thalorna module
-        authors:
-            - name: Toasty
-              discord: toasty#8538
-              flags: {}
         license: LICENSE.md
         readme: README.md
         changelog: CHANGELOG.md
